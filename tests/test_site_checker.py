@@ -12,7 +12,9 @@ def test_site_checker():
                Regexp(id=1, regexp=".*OK$"),
                Regexp(id=2, regexp="^200"),
                Regexp(id=3, regexp="^Failure")]
-    site = Site(id=SITE_ID, url="http://httpstat.us/200", regexps=regexps)
+    site = Site(id=SITE_ID,
+                url="http://httpstat.us/200",
+                regexps=regexps)
     checker = SiteChecker(site, 60)
     completed = threading.Event()
 

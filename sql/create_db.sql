@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS sites;
 CREATE TABLE sites (
     id bigserial PRIMARY KEY,
     url varchar UNIQUE NOT NULL,
-    group_id varchar(64)
+    group_name varchar(64)
 );
 
 CREATE TABLE metrics (
@@ -22,7 +22,6 @@ CREATE TABLE metrics (
 
     CONSTRAINT fk_site_id  FOREIGN KEY (site_id)  REFERENCES sites (id)
 );
-
 
 CREATE TABLE regexp_checks (
     id bigserial PRIMARY KEY,
