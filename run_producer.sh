@@ -1,1 +1,1 @@
-env=prod group_name=${1} python -m producer
+env=prod group_name=${1:-group_01} python -m producer

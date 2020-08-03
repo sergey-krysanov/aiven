@@ -1,1 +1,1 @@
-env=prod partition=${1} python -m consumer
+env=prod partition=${1:-0} python -m consumer
